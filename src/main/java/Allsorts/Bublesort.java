@@ -19,7 +19,9 @@ int arr[] = new int[(int) (Math.random() * 100)];
 
 }
 	public static void  bubbleSort(int[] arr){
-	    
+		/*Vneshniy cicl kajdiy raz sokrashaetsya fragment massiva,
+		  tak kak vnutreniy cicl kajdiy raz stavit v konec fragmen s max elementom massiva
+		 */   
 	
 	    for(int i = arr.length-1 ; i > 0 ; i--){
 	        for(int j = 0 ; j < i ; j++){
