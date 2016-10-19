@@ -18,6 +18,40 @@ public class Coctailsort {
 			    }
 			                
 	}
-	}
+	
 
+
+public static void coctailSort(int[] arr){
+    int left = 0; // levaya granica
+    int right = arr.length - 1; // pravaya
+
+    do
+    {
+        //Sdvigaem k koncu massiva "tyajelie elementi"
+        for (int i = left; i < right; i++)
+        {
+            if(arr[i] > arr[i+1])
+            {
+                arr[i] ^= arr[i+1];
+                arr[i+1] ^= arr[i];
+                arr[i] ^= arr[i+1];
+            }
+        }
+        right--; //umen'shaem pravuu granicu 
+        //Sdvigaem k nachalu massiva "legkie elementiy"
+        for (int i = right; i > left ; i--)
+        {
+            if(arr[i] < arr[i-1])
+            {
+                arr[i] ^= arr[i-1];
+                arr[i-1] ^= arr[i];
+                arr[i] ^= arr[i-1];
+            }
+        }
+        left++; //Uvelichivaem levuu granicu 
+    } while (left <= right);
+
+  
+
+}
 }
